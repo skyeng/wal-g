@@ -240,8 +240,6 @@ var (
 		MaxDelayedSegmentsCount:        "0",
 		SerializerTypeSetting:          "json_default",
 		LibsodiumKeyTransform:          "none",
-		PgFailoverStoragesCheckTimeout: "30s",
-		PgFailoverStorageCacheLifetime: "15m",
 		PgpEnvelopeCacheExpiration:     "0",
 	}
 
@@ -267,11 +265,13 @@ var (
 	}
 
 	PGDefaultSettings = map[string]string{
-		PgWalSize:                   "16",
-		PgBackRestStanza:            "main",
-		PgAliveCheckInterval:        "1m",
-		PgFailoverStoragesCheckSize: "1mb",
-		PgDaemonWALUploadTimeout:    "60s",
+		PgWalSize:                      "16",
+		PgBackRestStanza:               "main",
+		PgAliveCheckInterval:           "1m",
+		PgFailoverStoragesCheckSize:    "1mb",
+		PgDaemonWALUploadTimeout:       "60s",
+		PgFailoverStoragesCheckTimeout: "30s",
+		PgFailoverStorageCacheLifetime: "15m",
 	}
 
 	GPDefaultSettings = map[string]string{
